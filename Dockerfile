@@ -8,4 +8,4 @@ MAINTAINER Lucas Russo
 COPY scripts/init-user-db.sh /docker-entrypoint-initdb.d
 
 # Create schemas
-COPY scripts/*.sql /docker-entrypoint-initdb.d
+COPY scripts/*.sql /docker-entrypoint-initdb.d/
