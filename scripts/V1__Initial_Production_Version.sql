@@ -50,7 +50,7 @@ CREATE TABLE cable (
     length real
 );
 
-ALTER TABLE cable OWNER TO cabledb_dev;
+ALTER TABLE cable OWNER TO cabledb;
 
 --
 -- Name: cable_id_seq; Type: SEQUENCE; Schema: public; Owner: -
@@ -69,7 +69,7 @@ CREATE SEQUENCE cable_id_seq
 --
 
 ALTER SEQUENCE cable_id_seq OWNED BY cable.id;
-ALTER SEQUENCE cable_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE cable_id_seq OWNER TO cabledb;
 
 --
 -- Name: cabletype; Type: TABLE; Schema: public; Owner: -; Tablespace: 
@@ -92,7 +92,7 @@ CREATE TABLE cabletype (
     voltage real
 );
 
-ALTER TABLE cabletype OWNER TO cabledb_dev;
+ALTER TABLE cabletype OWNER TO cabledb;
 
 
 --
@@ -112,7 +112,7 @@ CREATE SEQUENCE cabletype_id_seq
 --
 
 ALTER SEQUENCE cabletype_id_seq OWNED BY cabletype.id;
-ALTER SEQUENCE cabletype_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE cabletype_id_seq OWNER TO cabledb;
 
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE displayview (
 );
 
 
-ALTER TABLE displayview OWNER TO cabledb_dev;
+ALTER TABLE displayview OWNER TO cabledb;
 
 
 --
@@ -141,7 +141,7 @@ CREATE TABLE displayview_displayviewcolumn (
     columns_id bigint NOT NULL
 );
 
-ALTER TABLE displayview_displayviewcolumn OWNER TO cabledb_dev;
+ALTER TABLE displayview_displayviewcolumn OWNER TO cabledb;
 --
 -- Name: displayview_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -159,7 +159,7 @@ CREATE SEQUENCE displayview_id_seq
 --
 
 ALTER SEQUENCE displayview_id_seq OWNED BY displayview.id;
-ALTER SEQUENCE displayview_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE displayview_id_seq OWNER TO cabledb;
 
   
 --
@@ -173,7 +173,7 @@ CREATE TABLE displayviewcolumn (
     displayview bigint
 );
 
-ALTER TABLE displayviewcolumn OWNER TO cabledb_dev;
+ALTER TABLE displayviewcolumn OWNER TO cabledb;
 
 --
 -- Name: displayviewcolumn_id_seq; Type: SEQUENCE; Schema: public; Owner: -
@@ -192,7 +192,7 @@ CREATE SEQUENCE displayviewcolumn_id_seq
 --
 
 ALTER SEQUENCE displayviewcolumn_id_seq OWNED BY displayviewcolumn.id;
-ALTER SEQUENCE displayviewcolumn_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE displayviewcolumn_id_seq OWNER TO cabledb;
 
 --
 -- Name: endpoint; Type: TABLE; Schema: public; Owner: -; Tablespace: 
@@ -209,7 +209,7 @@ CREATE TABLE endpoint (
     validity character varying(255)
 );
 
-ALTER TABLE endpoint OWNER TO cabledb_dev;
+ALTER TABLE endpoint OWNER TO cabledb;
 
 --
 -- Name: endpoint_id_seq; Type: SEQUENCE; Schema: public; Owner: -
@@ -228,7 +228,7 @@ CREATE SEQUENCE endpoint_id_seq
 --
 
 ALTER SEQUENCE endpoint_id_seq OWNED BY endpoint.id;
-ALTER SEQUENCE endpoint_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE endpoint_id_seq OWNER TO cabledb;
 
 --
 -- Name: history; Type: TABLE; Schema: public; Owner: -; Tablespace: 
@@ -245,7 +245,7 @@ CREATE TABLE history (
     entityname character varying(255)
 );
 
-ALTER TABLE history OWNER TO cabledb_dev;
+ALTER TABLE history OWNER TO cabledb;
 
 --
 -- Name: history_id_seq; Type: SEQUENCE; Schema: public; Owner: -
@@ -264,7 +264,7 @@ CREATE SEQUENCE history_id_seq
 --
 
 ALTER SEQUENCE history_id_seq OWNED BY history.id;
-ALTER SEQUENCE history_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE history_id_seq OWNER TO cabledb;
 
 --
 -- Name: query; Type: TABLE; Schema: public; Owner: -; Tablespace: 
@@ -279,7 +279,7 @@ CREATE TABLE query (
     entitytype character varying(255)
 );
 
-ALTER TABLE query OWNER TO cabledb_dev;
+ALTER TABLE query OWNER TO cabledb;
 
 
 --
@@ -299,7 +299,7 @@ CREATE SEQUENCE query_id_seq
 --
 
 ALTER SEQUENCE query_id_seq OWNED BY query.id;
-ALTER SEQUENCE query_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE query_id_seq OWNER TO cabledb;
 
 --
 -- Name: query_querycondition; Type: TABLE; Schema: public; Owner: -; Tablespace: 
@@ -311,7 +311,7 @@ CREATE TABLE query_querycondition (
 );
 
 
-ALTER TABLE query_querycondition OWNER TO cabledb_dev;
+ALTER TABLE query_querycondition OWNER TO cabledb;
   
 --
 -- Name: querycondition; Type: TABLE; Schema: public; Owner: -; Tablespace: 
@@ -330,7 +330,7 @@ CREATE TABLE querycondition (
 );
 
 
-ALTER TABLE querycondition OWNER TO cabledb_dev;
+ALTER TABLE querycondition OWNER TO cabledb;
 
 --
 -- Name: querycondition_id_seq; Type: SEQUENCE; Schema: public; Owner: -
@@ -349,7 +349,7 @@ CREATE SEQUENCE querycondition_id_seq
 --
 
 ALTER SEQUENCE querycondition_id_seq OWNED BY querycondition.id;
-ALTER SEQUENCE querycondition_id_seq OWNER TO cabledb_dev;
+ALTER SEQUENCE querycondition_id_seq OWNER TO cabledb;
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
@@ -567,7 +567,7 @@ REVOKE ALL ON SCHEMA public FROM PUBLIC;
 REVOKE ALL ON SCHEMA public FROM postgres;
 GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
-GRANT ALL ON SCHEMA public TO cabledb_dev;
+GRANT ALL ON SCHEMA public TO cabledb;
 
 
 --

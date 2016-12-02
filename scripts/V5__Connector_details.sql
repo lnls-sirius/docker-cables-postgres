@@ -46,7 +46,7 @@ ALTER TABLE ONLY endpoint
     ADD CONSTRAINT fk_g246e21ge4icztmsug63rv35z FOREIGN KEY (connector_id) REFERENCES connector(id);
 
 ALTER TABLE connector
-  OWNER TO cabledb_dev;
+  OWNER TO cabledb;
   
 ALTER SEQUENCE connector_id_seq
-  OWNER TO cabledb_dev;
+  OWNER TO cabledb;
