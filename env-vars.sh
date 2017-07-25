@@ -13,4 +13,4 @@ CABLES_DOCKER_RUN_NAME=cables-postgres
 CABLES_DOCKER_RUN_NAME_PSQL=${CABLES_DOCKER_RUN_NAME}-psql
 CABLES_DOCKER_IMAGE_NAME=docker-${CABLES_DOCKER_RUN_NAME}
 
-CABLES_DOCKER_VOLUME=cables-postgres-volume
+CABLES_DOCKER_VOLUME=dockercablescomposed_cables-postgres-volume
