@@ -3,14 +3,12 @@ ALTER TABLE cable ADD qualityreport_id bigint;
 
 
 --
--- Name: artifact; Type: TABLE; Schema: public; Owner: cabledb
+-- Name: artifact; Type: TABLE; Schema: public; Owner: ${user}
 --
 
 CREATE TABLE artifact (
     id bigint NOT NULL,
     description character varying(255),
-    modified_at timestamp without time zone,
-    modified_by character varying(255),
     name character varying(255),
     uri text,
     rooturi text,
@@ -20,7 +18,7 @@ CREATE TABLE artifact (
 
 
 --
--- Name: artifact_id_seq; Type: SEQUENCE; Schema: public; Owner: cabledb
+-- Name: artifact_id_seq; Type: SEQUENCE; Schema: public; Owner: ${user}
 --
 
 CREATE SEQUENCE artifact_id_seq
@@ -31,20 +29,20 @@ CREATE SEQUENCE artifact_id_seq
     CACHE 1;
 
 --
--- Name: artifact_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: cabledb
+-- Name: artifact_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ${user}
 --
 
 ALTER TABLE ONLY artifact ALTER COLUMN id SET DEFAULT nextval('artifact_id_seq'::regclass);
 
 --
--- Name: artifact_pkey; Type: CONSTRAINT; Schema: public; Owner: cabledb
+-- Name: artifact_pkey; Type: CONSTRAINT; Schema: public; Owner: ${user}
 --
 
 ALTER TABLE ONLY artifact
     ADD CONSTRAINT artifact_pkey PRIMARY KEY (id);
 
 --
--- Name: fk_e5t5yfslr9ur0lgtgqbmln45e; Type: FK CONSTRAINT; Schema: public; Owner: cabledb
+-- Name: fk_e5t5yfslr9ur0lgtgqbmln45e; Type: FK CONSTRAINT; Schema: public; Owner: ${user}
 --
 
 ALTER TABLE ONLY cabletype
@@ -55,6 +53,6 @@ ALTER TABLE ONLY cable
     ADD CONSTRAINT fk_z2t1gfetj3tg6rtsgsharb00d FOREIGN KEY (qualityreport_id) REFERENCES artifact(id);
     
     
-ALTER TABLE artifact OWNER TO cabledb;
+ALTER TABLE artifact OWNER TO ${user};
     
 ALTER SEQUENCE artifact_id_seq OWNED BY artifact.id;

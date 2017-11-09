@@ -47,7 +47,7 @@ ALTER TABLE ONLY cabletype
     ADD CONSTRAINT fk_r079j78rx6cvmklhmt31jt75i FOREIGN KEY (manufacturer_id) REFERENCES manufacturer(id);
 
 ALTER TABLE manufacturer
-  OWNER TO cabledb;
+  OWNER TO ${user};
   
 ALTER SEQUENCE manufacturer_id_seq
-  OWNER TO cabledb;
+  OWNER TO ${user};
