@@ -4,8 +4,10 @@ FROM postgres:9.5.4
 
 MAINTAINER Lucas Russo
 
+ENV SCRIPTS_VERSION 2.2.2
+
 # Add initial databases
 COPY scripts/init-user-db.sh /docker-entrypoint-initdb.d
 
 # Create schemas
-COPY scripts/*.sql /docker-entrypoint-initdb.d/
+COPY scripts/${SCRIPTS_VERSION}/*.sql /docker-entrypoint-initdb.d/
