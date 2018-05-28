@@ -1,0 +1,1 @@
+UPDATE cable SET status='INSERTED' WHERE status='APPROVED';
