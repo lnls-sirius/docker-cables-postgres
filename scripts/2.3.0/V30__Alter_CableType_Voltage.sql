@@ -1,0 +1,1 @@
+ALTER TABLE cabletype ALTER COLUMN voltage TYPE integer;
